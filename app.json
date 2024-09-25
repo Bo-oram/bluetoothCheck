@@ -1,4 +1,7 @@
 {
   "name": "bluetoothCheck",
-  "displayName": "bluetoothCheck"
+  "displayName": "bluetoothCheck",
+  "entitlements": {
+    "com.apple.developer.networking.wifi-info": "true"
+  }
 }

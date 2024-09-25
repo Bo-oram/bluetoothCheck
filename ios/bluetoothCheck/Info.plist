@@ -26,14 +26,23 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app requires access to Bluetooth.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app requires access to Bluetooth peripherals.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>이 앱은 Wi-Fi SSID를 가져오기 위해 로컬 네트워크 접근이 필요합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>이 앱은 Wi-Fi SSID를 가져오기 위해 위치에 접근해야 합니다.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>이 앱이 Wi-Fi 정보를 가져오는 데 필요한 위치 권한입니다.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>이 앱이 Wi-Fi 정보를 가져오기 위해 위치 서비스가 필요합니다.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

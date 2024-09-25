@@ -15,6 +15,8 @@
 		20F314AF1B16BD83E1B6C24E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 836B1933BBE4CF6C49363529 /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-bluetoothCheck-bluetoothCheckTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-bluetoothCheck-bluetoothCheckTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BCCA64292CA288CC0019D501 /* WifiModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCA64282CA288CC0019D501 /* WifiModule.m */; };
+		BCCA642B2CA2CB660019D501 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCA642A2CA2CB660019D501 /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = bluetoothCheck/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836B1933BBE4CF6C49363529 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = bluetoothCheck/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-bluetoothCheck-bluetoothCheckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetoothCheck-bluetoothCheckTests.release.xcconfig"; path = "Target Support Files/Pods-bluetoothCheck-bluetoothCheckTests/Pods-bluetoothCheck-bluetoothCheckTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCCA64272CA288470019D501 /* WifiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WifiModule.h; sourceTree = "<group>"; };
+		BCCA64282CA288CC0019D501 /* WifiModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WifiModule.m; sourceTree = "<group>"; };
+		BCCA642A2CA2CB660019D501 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		BCCA642C2CA2CF9F0019D501 /* bluetoothCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = bluetoothCheck.entitlements; path = bluetoothCheck/bluetoothCheck.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -89,6 +95,7 @@
 		13B07FAE1A68108700A75B9A /* bluetoothCheck */ = {
 			isa = PBXGroup;
 			children = (
+				BCCA642C2CA2CF9F0019D501 /* bluetoothCheck.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -97,6 +104,9 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				836B1933BBE4CF6C49363529 /* PrivacyInfo.xcprivacy */,
+				BCCA64272CA288470019D501 /* WifiModule.h */,
+				BCCA64282CA288CC0019D501 /* WifiModule.m */,
+				BCCA642A2CA2CB660019D501 /* Entitlements.plist */,
 			);
 			name = bluetoothCheck;
 			sourceTree = "<group>";
@@ -211,7 +221,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -248,6 +258,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BCCA642B2CA2CB660019D501 /* Entitlements.plist in Resources */,
 				20F314AF1B16BD83E1B6C24E /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCA64292CA288CC0019D501 /* WifiModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -419,6 +431,7 @@
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-bluetoothCheck-bluetoothCheckTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4SYKT3N489;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -435,7 +448,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluetoothcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bluetoothCheck.app/bluetoothCheck";
 			};
@@ -447,6 +460,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4SYKT3N489;
 				INFOPLIST_FILE = bluetoothCheckTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,7 +473,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluetoothcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bluetoothCheck.app/bluetoothCheck";
 			};
@@ -471,8 +485,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = bluetoothCheck/bluetoothCheck.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9RM92G4Y7Z;
+				DEVELOPMENT_TEAM = 4SYKT3N489;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = bluetoothCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -485,8 +500,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluetoothcheck;
 				PRODUCT_NAME = bluetoothCheck;
+				SWIFT_OBJC_BRIDGING_HEADER = "bluetoothCheck-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -499,8 +515,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = bluetoothCheck/bluetoothCheck.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9RM92G4Y7Z;
+				DEVELOPMENT_TEAM = 4SYKT3N489;
 				INFOPLIST_FILE = bluetoothCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,8 +529,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluetoothcheck;
 				PRODUCT_NAME = bluetoothCheck;
+				SWIFT_OBJC_BRIDGING_HEADER = "bluetoothCheck-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
